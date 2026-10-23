@@ -4,6 +4,7 @@
 : "${NUM_PARTIES:=32}" 
 : "${NUM_KEY_SHARES:=4}"
 : "${SENDER_BITS=10}"
+: "${PARALLEL=1}"
 
 
 : "${DEPTH=30}" #3 + log_2(Parties) for BFV
@@ -13,5 +14,5 @@
 # Create or overwrite the result.txt file
 > ckks_32parties_10bits.txt
 
-{ time NUM_KEY_SHARES=$NUM_KEY_SHARES INTERSECTION=$INTERSECTION SENDER_BITS=$SENDER_BITS DEPTH=$DEPTH NUM_PARTIES=$NUM_PARTIES TYPE=$TYPE ./demo_test.sh; } 2>&1 | tee -a ckks_32parties_10bits.txt
+{ time NUM_KEY_SHARES=$NUM_KEY_SHARES INTERSECTION=$INTERSECTION SENDER_BITS=$SENDER_BITS DEPTH=$DEPTH NUM_PARTIES=$NUM_PARTIES TYPE=$TYPE PARALLEL=$PARALLEL ./demo_test.sh; } 2>&1 | tee -a ckks_32parties_10bits.txt
 
