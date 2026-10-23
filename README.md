@@ -15,7 +15,7 @@ This repository is only suitable for Linux-systems (WSL should work).
 
 First, gather all dependencies by running `sudo ./dependencies.sh`.
 
-Then execute the test with `python examine_false_positve_rate.py [upperlimit]`.
+Then execute the test with `python examine_false_positive_rate.py [upperlimit]`.
 The upperlimit is optional. If none are given the program runs until it is interuppted by the user.
 
 
