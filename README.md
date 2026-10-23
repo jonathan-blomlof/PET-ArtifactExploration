@@ -13,11 +13,11 @@ The dependecy script has been modified. The exact results of this modifcation is
 
 This repository is only suitable for Linux-systems (WSL should work). 
 
-First, gather all dependencies by running `sudo dependencies.sh`.
+First, gather all dependencies by running `sudo ./dependencies.sh`.
 
 Then execute the test with `python examine_false_positve_rate.py [upperlimit]`.
 The upperlimit is optional. If none are given the program runs until it is interuppted by the user.
 
 
 ## Noteworthy problems
-In essence the repository is made for linux-systems. On my machine, Windows has a *terrible* routine of converint '\n' into '\r\n' which may break some scripts. 
+In essence the repository is made for linux-systems. On my machine, Windows has a *terrible* routine of converting '\n' into '\r\n' which may break some scripts. 
