@@ -10,7 +10,7 @@ set -x
 
 sudo apt update
 sudo apt install -y parallel libjsonrpccpp-dev libjsonrpccpp-tools g++ openssl libssl-dev libomp-dev git build-essential cmake make autoconf
-touch ~/.parallel/will-cite # Include this to suppress annoying GNU Parallel message
+#touch ~/.parallel/will-cite # Include this to suppress annoying GNU Parallel message
 
 git clone https://github.com/openfheorg/openfhe-development.git
 cd openfhe-development
