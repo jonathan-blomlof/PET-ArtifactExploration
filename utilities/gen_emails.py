@@ -19,9 +19,15 @@ file_name = sys.argv[1]
 if len(sys.argv) >= 3:
     num_lines = int(sys.argv[2])
 
+fake_emails = []
+while len(fake_emails) < num_lines:
+    fake_email = generate_fake_email()
+    if fake_email in fake_emails:
+        continue
+    fake_emails.append(fake_email)
+
 with open(file_name, "w") as file:
-    for i in range(num_lines):
-        fake_email = generate_fake_email()
+    for i, fake_email in enumerate(fake_emails):
         file.write(f"{i} {fake_email}\n")
 
 print(f"Generated {num_lines} fake email addresses and saved them in '{file_name}'.")
